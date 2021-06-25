@@ -1,21 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package agmed;
 
-/**
- *
- * @author denis
- */
+
 public class AgMed {
 
-    /**
-     * @param args the command line arguments
-     */
+    
+
     public static void main(String[] args) {
-        
+        /**
         Cliente joao = new Cliente("João", "095.123.309-41", "Rua verde, 96" , "tel: 9994155515");
        
         
@@ -32,7 +24,30 @@ public class AgMed {
        joao.limparEntrada("12022002");
        
        System.out.println(joao.toString());
+       **/
        
+        Consulta cons = new Consulta("anderson", "123");
+        
+        cons.setData(28, 2, 2021);
+        
+        
+        System.out.println(cons.getData());
+        System.out.println(cons.getPaciente());
+        System.out.println(cons.getCPF());
+        
+        
+        System.out.println();
+        cons.setCPF("456");
+        cons.setPaciente("Bruno");
+        
+        cons.setData(29, 2, 2021);
+        
+        
+        
+        System.out.println(cons.getData());
+        System.out.println(cons.getPaciente());
+        System.out.println(cons.getCPF());
+        
     }
    
 }

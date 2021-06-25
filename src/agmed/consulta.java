@@ -8,11 +8,11 @@ package agmed;
 
 public class Consulta {
     
-    private String data, paciente;
+    private String data, paciente, cpf;
     
-    public Consulta(String data, String paciente){
-        this.data = data;
+    public Consulta(String paciente, String cpf){
         this.paciente = paciente;
+        this.cpf = cpf;
     }
     
     public boolean setData(int dia, int mes, int ano){
@@ -76,12 +76,25 @@ public class Consulta {
         
     }
     
+    public boolean setCPF(String cpf){
+        if (cpf.length() == 3){
+            this.cpf = cpf;
+            return true;
+        }else
+            return false;
+        
+    }
+    
     public String getData (){
         return data;
     }
     
     public String getPaciente(){
         return paciente;
+    }
+    
+        public String getCPF(){
+        return cpf;
     }
     
 }
