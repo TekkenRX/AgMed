@@ -10,7 +10,7 @@ public class Cliente extends PessoaFisica{
         super(nome, cpf, endereco, contato);
         
     }
-   
+
     private final Map<String, String> historicoMedico = new HashMap<>();
     
     public void novaEntrada(String data, String desc){

@@ -1,7 +1,6 @@
 
 package agmed;
 
-
 public class AgMed {
 
     
