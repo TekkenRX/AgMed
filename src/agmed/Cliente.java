@@ -1,15 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package agmed;
 import java.util.*;
 
-/**
- *
- * @author denis
- */
 public class Cliente extends PessoaFisica{
     
     public Cliente(String nome, String cpf, String endereco, String contato){
@@ -18,7 +10,7 @@ public class Cliente extends PessoaFisica{
         
     }
    
-    private Map<String, String> historicoMedico = new HashMap<>();
+    private final Map<String, String> historicoMedico = new HashMap<>();
     
     public void novaEntrada(String data, String desc){
         
@@ -47,7 +39,8 @@ public class Cliente extends PessoaFisica{
         return dia + "\n" + historicoMedico.get(data) + "\n";
     }
     
-    @Override public String toString(){
+    @Override 
+    public String toString(){
         
         if (!(historicoMedico.isEmpty())){
             return super.toString() + "historicoMedico="+ historicoMedico.toString();
